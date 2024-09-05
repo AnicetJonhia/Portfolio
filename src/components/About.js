@@ -1,6 +1,7 @@
 import React from "react";
 import monImage from "../images/about.jpeg"
 
+
 const About = () => {
     return(
         <section className="about-section section-padding" id="about">

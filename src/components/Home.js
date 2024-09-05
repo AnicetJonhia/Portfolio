@@ -1,6 +1,6 @@
 // Home.js
 import React from 'react';
-import monImage from '../images/hero.png'
+import monImage from '../images/aj.png'
 const Home = () => {
   return (
     <section className="home-section" id="home">
@@ -9,13 +9,13 @@ const Home = () => {
             <li><a href="https://github.com/AnicetJonhia"><i className="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/anicet-jonhia-randrianambinina-266628244/"><i className="fab fa-linkedin"></i></a></li>
          
-            {/* ... le reste du code de la section Home ... */}
+            {/* ...  ... */}
         </ul>
       <div className="container">
         <div className="row align-items-center">
             <div className="home-text">
                 <h4>Hello</h4>
-                <h1>Anicet Randrianambinina</h1>
+                <h1 >Anicet Randrianambinina</h1>
                 <span>Web / Mobile Developer</span>
                 <p>Competent, motivated and dedicated in the field of Information Technology.</p>
                     <a href="https://cvdesignr.com/p/655471e67b6d9" className="btn btn-1">Dowload CV</a>
