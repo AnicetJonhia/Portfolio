@@ -1,6 +1,5 @@
 import React from "react";
-import monImage from "../images/about.jpeg"
-
+import monImage from "../images/about.jpeg";
 
 const About = () => {
     return(
@@ -9,32 +8,30 @@ const About = () => {
               <div className="row align-items-center justify-content-center">
                   <div className="about-image">
                       <div className="img-box 2">
-                          {/* <img src="images/about_hero.png" alt=""> */}
-                          <img src={monImage} alt="" />
-                          {/* <div className="about-shape"></div> */}
+                          <img src={monImage} alt="Anicet" />
                       </div>
                   </div>
                   <div className="about-content">
                       <div className="section-title">
                           <h5 className="sub-title">About</h5>
-                          <h3 className="main-title">Why You Hire Me?</h3>
+                          <h3 className="main-title">Why You Should Hire Me?</h3>
                           <ul className="line">
                               <li></li>
                               <li></li>
                               <li></li>
                           </ul>
-                      </div> 
+                      </div>
                       <p>
                       My name is Tokiniaina Jean Anicet Jonhia RANDRIANAMBININA.
                       <br />
-                       I come from Fianarantsoa , Madagascar. 
+                       I come from Fianarantsoa, Madagascar.
                        <br />
-                       🤲 I am in the second year of my degree pursuing the IT integration and development course at the “Ecole Supérieure des Technologies de l'Information (ESTI) ” in Antananarivo, Madagascar.🎓
+                       🤲 I am currently in the third year of my degree, pursuing an IT integration and development course at the “Ecole Supérieure des Technologies de l'Information (ESTI)” in Antananarivo, Madagascar.🎓
                       </p>
                           <div className="about-skills">
                               <div className="skill-item">
                                   <div className="skill-header">
-                                      <h6 className="skill-title">HTML, CSS, Tailwind , Bootstrap</h6>
+                                      <h6 className="skill-title">Node.js, React, Next.js, React Native</h6>
                                       <div className="skill-percentage">
                                           <p><span className="counter">60</span>%</p>
                                       </div>
@@ -44,23 +41,10 @@ const About = () => {
                                           <div className="bar progress-line" data-progress="60%"></div>
                                       </div>
                                   </div>
-                              </div> 
+                              </div>
                               <div className="skill-item">
                                 <div className="skill-header">
-                                    <h6 className="skill-title">ReactJs, Laravel, Django, Flutter</h6>
-                                    <div className="skill-percentage">
-                                        <p><span className="counter">45</span>%</p>
-                                    </div>
-                                </div>
-                                <div className="skill-bar">
-                                    <div className="bar-inner">
-                                        <div className="bar progress-line" data-progress="45%"></div>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div className="skill-item">
-                                <div className="skill-header">
-                                    <h6 className="skill-title">SQL</h6>
+                                    <h6 className="skill-title">Python, Django</h6>
                                     <div className="skill-percentage">
                                         <p><span className="counter">60</span>%</p>
                                     </div>
@@ -70,20 +54,46 @@ const About = () => {
                                         <div className="bar progress-line" data-progress="60%"></div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div className="skill-item">
                                 <div className="skill-header">
-                                    <h6 className="skill-title">UI/UX design</h6>
+                                    <h6 className="skill-title">SQL, NoSQL</h6>
                                     <div className="skill-percentage">
-                                        <p><span className="counter">65</span>%</p>
+                                        <p><span className="counter">55</span>%</p>
                                     </div>
                                 </div>
                                 <div className="skill-bar">
                                     <div className="bar-inner">
-                                        <div className="bar progress-line" data-progress="65%"></div>
+                                        <div className="bar progress-line" data-progress="55%"></div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
+                            <div className="skill-item">
+                                <div className="skill-header">
+                                    <h6 className="skill-title">UI/UX Design</h6>
+                                    <div className="skill-percentage">
+                                        <p><span className="counter">50</span>%</p>
+                                    </div>
+                                </div>
+                                <div className="skill-bar">
+                                    <div className="bar-inner">
+                                        <div className="bar progress-line" data-progress="50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="skill-item">
+                                <div className="skill-header">
+                                    <h6 className="skill-title">Artificial Intelligence (AI)</h6>
+                                    <div className="skill-percentage">
+                                        <p><span className="counter">50</span>%</p>
+                                    </div>
+                                </div>
+                                <div className="skill-bar">
+                                    <div className="bar-inner">
+                                        <div className="bar progress-line" data-progress="30%"></div>
+                                    </div>
+                                </div>
+                            </div>
                           </div>
                   </div>
               </div>

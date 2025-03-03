@@ -2,6 +2,8 @@
 import React from 'react';
 import ibonia from "../images/ibonia.png"
 import lcom from "../images/lcom.jpeg"
+import nextrocket from "../images/next-rocket.png"
+import futurmap from "../images/futurmap.png"
 
 const Services = () => {
   return (
@@ -16,46 +18,70 @@ const Services = () => {
                         <li></li>
                         <li></li>
                     </ul>
-            
                 </div>
             </div>
             <div className="row">
                 <div className="service-item">
                     <div className="service-item-inner">
                         <div className="icon">
-                            <img  src={ibonia} alt="" />
+                            <img src={ibonia} alt=""/>
                         </div>
-                        <h3>Professional discovery course</h3>
-                        <h4>Ibonia, Jully 2022</h4>
+                        <h3>Professional Discovery Course</h3>
+                        <h4>Ibonia, Madagascar - July 2022</h4>
                         <p>Observation</p>
-                        <p>Understanding the agile method</p>
-                    </div>
-                </div>
-                
-                <div className="service-item">
-                    <div className="service-item-inner">
-                        <div className="icon">
-                            <img src={lcom} alt="" />
-                        </div>
-                        <h3>Internship</h3>
-                        <h4>LCom Corporation, October to November 2022</h4>
-                        <p>Showcase site</p>
-                        <p>Introducing to OOP in PHP</p>
+                        <p>Understanding the Agile Method</p>
                     </div>
                 </div>
 
                 <div className="service-item">
                     <div className="service-item-inner">
                         <div className="icon">
-                            <img src={lcom} alt="" />
+                            <img src={lcom} alt=""/>
                         </div>
                         <h3>Internship</h3>
-                        <h4>LCom Corporation, September to November 2023</h4>
-                        <p>UX / UI Design</p>
-                        <p>Getting to know ReactJs</p>
+                        <h4>LCom Corporation, Madagascar - October to November 2022</h4>
+                        <p>Showcase Site</p>
+                        <p>Introduction to OOP in PHP</p>
                     </div>
                 </div>
-             </div>
+
+                <div className="service-item">
+                    <div className="service-item-inner">
+                        <div className="icon">
+                            <img src={lcom} alt=""/>
+                        </div>
+                        <h3>Internship</h3>
+                        <h4>LCom Corporation, Madagascar - September to November 2023</h4>
+                        <p>UX / UI Design</p>
+                        <p>Getting to Know ReactJs</p>
+                    </div>
+                </div>
+
+                <div className="service-item">
+                    <div className="service-item-inner">
+                        <div className="icon">
+                            <img src={nextrocket} alt=""/>
+                        </div>
+                        <h3>Freelance JavaScript Developer</h3>
+                        <h4>NextRocket, Dubai - January 2024</h4>
+                        <p>Automation via Web Scraping</p>
+                    </div>
+                </div>
+
+                <div className="service-item">
+                    <div className="service-item-inner">
+                        <div className="icon">
+                            <img src={futurmap} alt=""/>
+                        </div>
+                        <h3>Python Developer</h3>
+                        <h4>Futurmap, Madagascar - Since March 2024</h4>
+                        <p>Developing and maintaining scripts and extensions with PyRevit</p>
+                        <p>Automating tasks in Autodesk Revit</p>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </section>
   );
