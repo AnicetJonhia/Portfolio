@@ -12,7 +12,8 @@ const Home = () => {
         <meta property="og:title" content="Anicet Randrianambinina - Software / AI Developer" />
         <meta property="og:description" content="Explore the portfolio of Anicet Randrianambinina, a skilled and passionate Software and AI Developer." />
         <meta property="og:image" content={monImage} />
-        <meta property="og:url" content="http://yourwebsite.com" />
+        <meta property="og:url" content="https://anicetjonhia.vercel.app/" />
+        <meta name="google-site-verification" content="1kWonT8tdal8JxBDAqzW51OuVm7bBtd3o9dAdZuJPcs" />
       </Helmet>
 
       <ul className="header-social">
