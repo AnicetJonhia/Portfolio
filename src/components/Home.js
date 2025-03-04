@@ -8,7 +8,7 @@ const Home = () => {
       <Helmet>
         <title>Anicet Randrianambinina - Software / AI Developer</title>
         <meta name="description" content="Anicet Randrianambinina is a Software and AI Developer, motivated and dedicated in the field of Information Technology. Explore his portfolio." />
-        <meta name="keywords" content="Software Developer, AI Developer, Web Development, Portfolio, Anicet Randrianambinina, Anicet, Anicet Jonhia, Anicet Jonhia Randrianambinina" />
+        <meta name="keywords" content="Software Developer, AI Developer, Web Development, Portfolio, Anicet Randrianambinina, Anicet, Anicet Jonhia, Anicet Jonhia Randrianambinina, Randrianambinina" />
         <meta property="og:title" content="Anicet Randrianambinina - Software / AI Developer" />
         <meta property="og:description" content="Explore the portfolio of Anicet Randrianambinina, a skilled and passionate Software and AI Developer." />
         <meta property="og:image" content={monImage} />
