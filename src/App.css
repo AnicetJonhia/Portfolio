@@ -270,7 +270,7 @@ img
 {
     position: relative;
     background-color: var(--black-100);
-    z-index: 1;
+
     overflow-x: hidden;
     padding-top: 5rem;
     
@@ -303,6 +303,10 @@ img
     flex: 0 0 50%;
     max-width: 100%;
     padding: 0 25px;
+}
+
+.home-section .home-text {
+    z-index: 10;
 }
 .home-section .home-text h4
 {
@@ -859,6 +863,10 @@ footer .copyright-text
     .home-section .home-text {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+
+    .home-section .home-text {
+        z-index: 10;
     }
   
     .home-section .home-image {
