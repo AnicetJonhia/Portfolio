@@ -881,15 +881,22 @@ footer .copyright-text
   
     .portfolio .portfolio-item,
     .service-section .service-item {
-      flex: 0 0 50%;
-      max-width: 50%;
+      flex: 0 0 100%;
+      max-width: 100%;
     }
+
+
 
     .service-section .service-item-inner:hover .icon img:hover
     {
         background-color: var(--white);
         color: var(--main-color);
         font-size: 24px;
+    }
+
+    .contact-section .contact-item{
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
   }
