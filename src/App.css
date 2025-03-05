@@ -174,7 +174,7 @@ img
     font-weight: 600;
     text-transform: capitalize;
 }
-.navbar .logo a span
+.navbar .logo a .oper
 {
     color: var(--main-color);
 }

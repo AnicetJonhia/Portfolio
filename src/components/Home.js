@@ -16,7 +16,7 @@ const Home = () => {
 
       </Helmet>
 
-      <ul className="header-social">
+      <ul className="header-social animate__animated animate__zoomIn animate__slow">
         <li>
           <a href="https://www.facebook.com/anicet.jonhia/?locale=fr_FR">
             <i className="fab fa-facebook-f"></i>
@@ -34,26 +34,27 @@ const Home = () => {
         </li>
       </ul>
 
-      <div className="container">
+      <div className="container ">
         <div className="row align-items-center">
-          <div className="home-text">
+          <div className="home-text animate__animated animate__fadeInLeft">
             <h4>Hello</h4>
             <h1>Anicet Randrianambinina</h1>
             <span>Software / AI Developer</span>
             <p>Competent, motivated and dedicated in the field of Information Technology.</p>
-            <a href="https://cvdesignr.com/p/655471e67b6d9" className="btn btn-1">
+            <a href="https://cvdesignr.com/p/655471e67b6d9"
+               className="btn btn-1 animate__animated animate__zoomIn animate__slow">
               Download CV
             </a>
           </div>
-          <div className="home-image">
-            <div className="img-box">
-              <img src={monImage} alt="Anicet Randrianambinina - Software and AI Developer" />
+          <div className="home-image ">
+            <div className="img-box ">
+              <img className={"animate__animated animate__rotateInDownRight"} src={monImage} alt="Anicet Randrianambinina - Software and AI Developer" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="header-hero-shape"></div>
+      <div className="header-hero-shape "></div>
     </section>
   );
 };

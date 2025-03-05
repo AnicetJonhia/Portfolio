@@ -7,9 +7,9 @@ const Navbar = () => {
         <div className="container">
 
             <div className="row justify-content-between">
-            {/* ... le reste du code du Navbar ... */}
+
                 <div className="logo">
-                    <a href="index.html">Devel<span>oper</span></a>
+                    <a href="index.html"><span className={"devel"}>Devel</span><span className={"oper"}>oper</span></a>
                     
                 </div>
                 
