@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-import { CoolMode } from "@/components/magicui/cool-mode";
+
 
 const navItems = ["Home", "About", "Stack", "Experience", "Portfolio", "Contact"]
 
@@ -13,13 +13,13 @@ export function Navbar() {
         <div className="font-bold text-xl">Anicet.dev</div>
         <div className="hidden md:flex space-x-6">
           {navItems.map((item) => (
-            <CoolMode><a
+            <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors"
             >
               {item}
-            </a></CoolMode>
+            </a>
           ))}
         </div>
         <div className="flex items-center">
@@ -55,14 +55,14 @@ function MobileMenu() {
       >
         <div className="flex flex-col space-y-3">
           {navItems.map((item) => (
-            <CoolMode><a
+            <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
               onClick={() => document.getElementById("mobile-menu")?.classList.add("hidden")}
             >
               {item}
-            </a></CoolMode>
+            </a>
           ))}
 
         </div>
