@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     icons: {
     icon: "/logo.png",
   },
+  metadataBase: new URL("https://anicetjonhia.vercel.app"),
+
   openGraph: {
     title: "Anicet Randrianambinina - Software / AI Developer",
     description: "Explore the portfolio of Anicet Randrianambinina, a skilled and passionate Software and AI Developer.",
