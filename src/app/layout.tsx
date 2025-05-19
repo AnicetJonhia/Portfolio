@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://anicetjonhia.vercel.app/",
     images: [
       {
-        url: "/logo.png",
+        url: "/images/hero.png",
         alt: "Anicet Randrianambinina Portfolio Image",
       },
     ],
