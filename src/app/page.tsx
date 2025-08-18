@@ -9,6 +9,7 @@ import {ExperienceSection} from "@/components/sections/experience-section"
 import {PortfolioSection} from "@/components/sections/portfolio-section"
 import {ContactSection} from "@/components/sections/contact-section"
 import {Footer} from "@/components/footer"
+import ChatBot from "@/components/chatbot"
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <ExperienceSection />
         <PortfolioSection />
         <ContactSection />
+        <ChatBot />                                                                                
 
       </main>
       <Footer />
