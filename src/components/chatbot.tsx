@@ -6,6 +6,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import ReactMarkdown from 'react-markdown';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 interface Message {
   id: string;
@@ -30,10 +35,17 @@ const ChatBot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const quickQuestions = [
-    "Who are you?",
-    "Your Contact?", 
-    "Summarize your skills"
-  ];
+  "Who are you?",
+  "Your Contact?", 
+  "Summarize your skills",
+  "What projects have you worked on?",
+  "What technologies do you use?",
+  "Can I see your resume?",
+  "What services do you offer?",
+  "Tell more about your experiences"
+ 
+];
+
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -61,7 +73,7 @@ const ChatBot = () => {
 
     // Send to n8n webhook and get response
     try {
-      const webhookUrl = `https://n8n-deploy-5io2.onrender.com/webhook/3d3f66c8-8cc2-4ad0-90c4-c64c8cbdef9d?message=${encodeURIComponent(textToSend)}`;
+      const webhookUrl = `https://n17n.app.n8n.cloud/webhook/3d3f66c8-8cc2-4ad0-90c4-c64c8cbdef9d?message=${encodeURIComponent(textToSend)}`;
       const response = await fetch(webhookUrl, {
         method: 'GET',
       });
@@ -96,10 +108,115 @@ const ChatBot = () => {
 
   const getBotResponse = (message: string): string => {
     const lowerMessage = message.toLowerCase();
-    // if (lowerMessage.includes('who are you') || lowerMessage.includes('qui es-tu')) {
-    //   return ''
-    // }
-    
+    if (lowerMessage.includes('who are you') || lowerMessage.includes('qui es-tu')) {
+      return `My name is **Tokiniaina Jean Anicet Jonhia RANDRIANAMBININA**.  
+I come from Fianarantsoa, Madagascar.
+
+🤖 Full-stack developer specializing in **React**, **Django**, and cloud services.  
+Experienced in building scalable, responsive web apps, with a focus on high-quality solutions.  
+Constantly learning and applying new techniques in software architecture and AI.`
+      
+    }
+
+    if (lowerMessage.includes('compétence') || lowerMessage.includes('skill') || lowerMessage.includes('stack') || lowerMessage.includes('tech')|| lowerMessage.includes('summarize your skills')){
+      return `# Technical Stack
+
+## Frontend
+- React
+- Next.js
+- React Native
+
+## Backend
+- Node.js
+- Django
+- Python
+
+## AI & Data
+- Machine Learning
+- Deep Learning
+- AI Integration
+
+## Database & Design
+- SQL
+- NoSQL
+- UI/UX Design
+      `
+    }
+
+    if (lowerMessage.includes('experience') ) {
+      return `# Professional Experience
+
+## Python Developer
+- **Company**: Futurmap, Madagascar
+- **Period**: Since March 2024
+- **Description**:
+  - Developing and maintaining scripts and extensions with PyRevit
+  - Automating tasks in Autodesk Revit
+
+## Freelance JavaScript Developer
+- **Company**: NextRocket, Dubai
+- **Period**: January 2024
+- **Description**:
+  - Automation via Web Scraping
+
+## Internship
+- **Company**: LCom Corporation, Madagascar
+- **Period**: September to November 2023
+- **Description**:
+  - UX / UI Design
+  - Getting to Know ReactJs
+
+## Internship
+- **Company**: LCom Corporation, Madagascar
+- **Period**: October to November 2022
+- **Description**:
+  - Showcase Site
+  - Introduction to OOP in PHP
+
+## Professional Discovery Course
+- **Company**: Ibonia, Madagascar
+- **Period**: July 2022
+- **Description**:
+  - Observation
+  - Understanding the Agile Method
+`
+    }
+
+ if (lowerMessage.includes('project') || lowerMessage.includes('projet') ) {
+    return `# My Projects
+
+## Agridi (2023)
+**Description**: Bridging producers and consumers through agri-tech app  
+**Tech**: React, Django, SQLite  
+
+
+## ToBib (2024)
+**Description**: AI as medical assistant  
+**Tech**: Next.js, AI, Python | Django  
+`
+ }
+
+     if (lowerMessage.includes('contact')) {
+      return `# Contact Information
+
+## Phone
++261344822412
+
+## Email
+anicet22.aps2a@gmail.com
+
+## Address
+Antananarivo, 101, Madagascar
+
+## Social Links
+- [GitHub](https://github.com/AnicetJonhia)
+- [LinkedIn](https://www.linkedin.com/in/anicet-jonhia-randrianambinina-266628244/)
+- [Facebook](https://www.facebook.com/anicet.jonhia/?locale=fr_FR)
+`                                                     
+      
+     }
+
+
     return '❌ Oops! Something went wrong. Please try again later.';
     
 };
@@ -118,13 +235,27 @@ const ChatBot = () => {
     <div className="fixed bottom-6 right-6 z-50">
       {/* Chat Toggle Button */}
       {!isOpen && (
-        <Button
+
+        <Tooltip>
+  <TooltipTrigger>
+        <Button variant={"outline"}
           onClick={() => setIsOpen(true)}
-          className="chat-gradient rounded-full w-14 h-14 shadow-chat interactive-scale"
+
+          className="chat-gradient cursor-pointer rounded-full w-16 h-16 shadow-chat interactive-scale"
           size="icon"
         >
-          <MessageCircle className="h-6 w-6 text-white" />
+          {/* <MessageCircle className="h-6 w-6 text-white" /> */}
+              <img
+      src="/images/bot.png" 
+      alt="Chatbot Icon"
+      className="h-14"
+    />
         </Button>
+        </TooltipTrigger>
+  <TooltipContent>
+    <p className='text-white'>🤖 Chat with my portfolio bot</p>
+  </TooltipContent>
+</Tooltip> 
       )}
 
       {/* Chat Window */}
@@ -134,10 +265,14 @@ const ChatBot = () => {
           <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-accent to-accent/90  rounded-t-lg">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                <Bot className="h-4 w-4" />
+                 <img
+                        src="/images/botBot.png" 
+                        alt="Chatbot Icon"
+                        className="h-7 "
+                      />
               </div>
               <div>
-                <h3 className="font-semibold text-sm">Assistant Portfolio</h3>
+                <h3 className="font-semibold text-sm">PortfolioAssistant</h3>
                 <p className="text-xs ">Online</p>
               </div>
             </div>
@@ -145,7 +280,7 @@ const ChatBot = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(false)}
-              className=" hover:bg-white/20 h-8 w-8"
+              className="cursor-pointer hover:bg-white/20 h-8 w-8"
             >
               <X className="h-4 w-4" />
             </Button>
@@ -161,7 +296,11 @@ const ChatBot = () => {
                 <div className="flex items-start space-x-2 max-w-[85%]">
                   {!message.isUser && (
                     <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                      <Bot className="h-3 w-3 " />
+                      <img
+                        src="/images/botBot.png" 
+                        alt="Chatbot Icon"
+                        className="h-5 "
+                      />
                     </div>
                   )}
                   
@@ -234,7 +373,7 @@ const ChatBot = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => handleQuickQuestion(question)}
-                      className="text-left justify-start h-auto py-2 px-3 text-xs hover:bg-accent/10 border-accent/20"
+                      className="text-left justify-start h-auto py-2 px-3 text-xs border hover:bg-muted/10 border-muted cursor-pointer"
                     >
                       {question}
                     </Button>
@@ -259,7 +398,7 @@ const ChatBot = () => {
               <Button
                 onClick={() => handleSendMessage()}
                 disabled={!inputValue.trim()}
-                className="chat-gradient rounded-full w-10 h-10 interactive-scale"
+                className="chat-gradient rounded-full w-10 h-10 interactive-scale cursor-pointer"
                 size="icon"
               >
                 <Send className="h-4 w-4 text-white" />
