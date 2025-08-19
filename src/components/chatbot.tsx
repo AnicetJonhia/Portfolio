@@ -35,13 +35,13 @@ const ChatBot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const quickQuestions = [
-  "Who are you?",
+ 
   "Your Contact?", 
   "Summarize your skills",
   "What projects have you worked on?",
   "What technologies do you use?",
   "Can I see your resume?",
-  "What services do you offer?",
+  
   "Tell more about your experiences"
  
 ];
@@ -257,10 +257,10 @@ Antananarivo, 101, Madagascar
   </TooltipContent>
 </Tooltip> 
       )}
-
       {/* Chat Window */}
       {isOpen && (
-        <Card className="w-96 h-[80vh] glass-effect shadow-chat animate-slide-up">
+  <div className="fixed bottom-0 right-0  z-50 w-full md:w-[400px] transition-all duration-300">
+    <Card className="h-[90vh] glass-effect shadow-chat animate-slide-up">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-accent to-accent/90  rounded-t-lg">
             <div className="flex items-center space-x-3">
@@ -404,8 +404,10 @@ Antananarivo, 101, Madagascar
                 <Send className="h-4 w-4 text-white" />
               </Button>
             </div>
+
           </div>
         </Card>
+        </div>
       )}
     </div>
   );
