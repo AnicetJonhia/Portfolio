@@ -73,7 +73,7 @@ const ChatBot = () => {
 
     // Send to n8n webhook and get response
     try {
-      const webhookUrl = `https://n17n.app.n8n.cloud/webhook/3d3f66c8-8cc2-4ad0-90c4-c64c8cbdef9d?message=${encodeURIComponent(textToSend)}`;
+      const webhookUrl = `https://n8n-icfo.onrender.com/webhook/3d3f66c8-8cc2-4ad0-90c4-c64c8cbdef9d?message=${encodeURIComponent(textToSend)}`;
       const response = await fetch(webhookUrl, {
         method: 'GET',
       });
