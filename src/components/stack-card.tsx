@@ -3,9 +3,9 @@ import { Badge } from "@/components/ui/badge"
 
 export function StackCard({ title, skills, icon }: { title: string; skills: string[]; icon: string }) {
   return (
-    <Card className="hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-2">
-        <div className="text-3xl mb-2">{icon}</div>
+    <Card className="hover:shadow-lg transition-shadow py-4">
+      <CardHeader className="flex items-center ">
+        <div className="text-3xl">{icon}</div>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>
