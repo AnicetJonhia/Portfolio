@@ -17,7 +17,7 @@ export function HeroSection() {
                     Anicet RANDRIANAMBININA
                   </span>
                 </h1>
-          <h2 className="text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300">Software / AI Developer</h2>
+          <h2 className="text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300">Software / AI & Data Science Developer</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg">
             Competent, motivated and dedicated in the field of Information Technology.
           </p>
