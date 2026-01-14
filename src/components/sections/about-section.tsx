@@ -10,7 +10,7 @@ export function AboutSection() {
         </p>
         <p className="text-lg leading-relaxed">
           🚀 Fullstack Developer specializing in Python, TypeScript, and AI & Data Science. 
-          Experienced in building scalable applications with Django, FastAPI, React, NextJs, React Native,
+          Experienced in building scalable applications with Django, FastAPI, React, Next.js, React Native,
           while designing efficient automation systems and ETL pipelines. 
           Awarded 3rd place at Devfest 2024 for an AI-powered medical assistant, 
           I am dedicated to bridging robust software architecture with innovative Machine Learning solutions.

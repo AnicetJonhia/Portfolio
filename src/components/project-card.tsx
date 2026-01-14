@@ -15,21 +15,39 @@ export function ProjectCard({
   tags: string[]
 }) {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-      <div className="relative h-48 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
-        <div className="absolute top-2 right-2 bg-emerald-600 text-white px-2 py-1 rounded-md text-sm font-medium">
+    <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-emerald-100 dark:border-emerald-900">
+      {/* Container Image avec zoom au survol */}
+      <div className="relative h-52 overflow-hidden">
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+        />
+        {/* Badge Année - Gardé en emerald-600 comme demandé */}
+        <div className="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
           {year}
         </div>
       </div>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
+
+      <CardHeader className="p-5 pb-2">
+        <CardTitle className="text-xl font-bold text-gray-900 dark:text-gray-100">
+          {title}
+        </CardTitle>
       </CardHeader>
-      <CardContent>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
+
+      <CardContent className="p-5 pt-0">
+        {/* line-clamp-3 permet de garder toutes les cartes à la même hauteur */}
+        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5 line-clamp-3">
+          {description}
+        </p>
+        
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <Badge key={tag} variant="outline" className="bg-gray-100 dark:bg-gray-800">
+            <Badge 
+              key={tag} 
+              variant="outline" 
+              className="bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-[11px] font-medium"
+            >
               {tag}
             </Badge>
           ))}
