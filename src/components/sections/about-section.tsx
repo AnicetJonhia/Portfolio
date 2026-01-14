@@ -7,9 +7,14 @@ export function AboutSection() {
       <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 md:p-8">
         <p className="text-lg leading-relaxed mb-4">
           My name is Tokiniaina Jean Anicet Jonhia RANDRIANAMBININA. I come from Fianarantsoa, Madagascar.
-        </p><p className="text-lg leading-relaxed">
-              🤖 Full-stack developer specializing in React, Django, and cloud services. Experienced in building scalable, responsive web apps, with a focus on high-quality solutions. Constantly learning and applying new techniques in software architecture and AI.
-            </p>
+        </p>
+        <p className="text-lg leading-relaxed">
+          🚀 Fullstack Developer specializing in Python, TypeScript, and AI & Data Science. 
+          Experienced in building scalable applications with Django, FastAPI, React, NextJs, React Native,
+          while designing efficient automation systems and ETL pipelines. 
+          Awarded 3rd place at Devfest 2024 for an AI-powered medical assistant, 
+          I am dedicated to bridging robust software architecture with innovative Machine Learning solutions.
+        </p>
 
       </div>
     </section>
