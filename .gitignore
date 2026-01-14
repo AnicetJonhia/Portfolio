@@ -1,41 +1,49 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# --- DEPENDENCIES ---
+node_modules/
+.pnp
+.pnp.js
+# Note: On ne met PAS bun.lockb ici, il doit être sur Git
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# --- NEXT.JS / BUILD ---
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
 
-# testing
-/coverage
+# --- ENVIRONMENT VARIABLES ---
+# On ignore tous les fichiers .env qui contiennent des secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Sauf le fichier d'exemple
+!.env.example
 
-# next.js
-/.next/
-/out/
+# --- VERCEL ---
+.vercel
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# --- LOGS ---
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+bun-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env.local
+# --- TESTING ---
+/coverage
 
-# vercel
-.vercel
+# --- IDE / SYSTEM ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.bak
+Thumbs.db
+*.pem
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# --- BUN SPECIFIC ---
+.bun-cache/
