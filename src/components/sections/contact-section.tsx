@@ -81,10 +81,23 @@ export function ContactSection() {
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
           <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
           <div className="space-y-4">
-            <ContactItem icon={<Phone className="h-5 w-5" />} text="+261344822412" />
-            <ContactItem icon={<Mail className="h-5 w-5" />} text="anicet22.aps2a@gmail.com" />
-            <ContactItem icon={<MapPin className="h-5 w-5" />} text="Antananarivo, 101, Madagascar" />
-          </div>
+          <ContactItem 
+            icon={<Phone className="h-5 w-5" />} 
+            text="+261 34 48 224 12" 
+            href="tel:+261344822412" 
+          />
+          
+          <ContactItem 
+            icon={<Mail className="h-5 w-5" />} 
+            text="anicet22.aps2a@gmail.com" 
+            href="mailto:anicet22.aps2a@gmail.com" 
+          />
+          
+          <ContactItem 
+            icon={<MapPin className="h-5 w-5" />} 
+            text="Antananarivo, 101, Madagascar" 
+          />
+        </div>
           <div className="mt-8 flex space-x-4">
             <SocialButton href="https://github.com/AnicetJonhia" icon="github" />
             <SocialButton href="https://www.linkedin.com/in/anicet-jonhia-randrianambinina-266628244/" icon="linkedin" />

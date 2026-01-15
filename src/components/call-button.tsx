@@ -19,7 +19,7 @@ export function CallButton() {
         whileTap={{ scale: 0.9 }}
         aria-label="Call me"
       >
-        <Phone className="h-5 w-5" />
+        <Phone className="h-6 w-6" />
       </motion.a>
     </Button>
   )

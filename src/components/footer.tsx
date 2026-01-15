@@ -39,7 +39,7 @@ export function Footer() {
               <li className="hover:text-emerald-500 transition-colors">Python (FastAPI & Django)</li>
               <li className="hover:text-emerald-500 transition-colors">AI & Machine Learning</li>
               <li className="hover:text-emerald-500 transition-colors">Data Analysis & ETL</li>
-              <li className="hover:text-emerald-500 transition-colors">React & NextJs</li>
+              <li className="hover:text-emerald-500 transition-colors">React & Next.js</li>
               <li className="hover:text-emerald-500 transition-colors">Mobile (React Native)</li>
             </ul>
           </div>

@@ -18,7 +18,7 @@ export function ThemeToggle() {
     
     return (
       <Button variant="ghost" size="icon" className="cursor-pointer">
-        <Sun className="h-5 w-5" />
+        <Sun className="h-6 w-6" />
       </Button>
     )
   }
