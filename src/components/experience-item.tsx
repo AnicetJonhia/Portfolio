@@ -16,7 +16,7 @@ export function ExperienceItem({
   return (
     <div className={`relative flex flex-col md:flex-row items-center w-full mb-12 ${isLeft ? "md:flex-row-reverse" : ""}`}>
       
-      
+ 
       <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-emerald-600 shadow-[0_0_10px_rgba(0,0,0,0.1)] z-10 transform -translate-x-1/2 md:translate-x-[-8px] top-1 md:top-6"></div>
 
      

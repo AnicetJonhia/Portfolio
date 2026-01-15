@@ -56,7 +56,7 @@ export function ExperienceSection() {
 
   return (
     <section id="experience" className="py-20 px-4 md:px-0">
-      <SectionTitle>Professional Experience</SectionTitle>
+      <SectionTitle>Professional Experiences</SectionTitle>
       
       <div className="mt-12 relative max-w-6xl mx-auto">
         

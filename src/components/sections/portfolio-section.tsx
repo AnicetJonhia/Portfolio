@@ -33,7 +33,7 @@ export function PortfolioSection() {
 
   return (
     <section id="portfolio" className="py-20">
-      <SectionTitle>My Projects</SectionTitle>
+      <SectionTitle>Personal Projects</SectionTitle>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <ProjectCard

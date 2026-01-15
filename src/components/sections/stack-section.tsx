@@ -4,7 +4,7 @@ import { StackCard } from "@/components/stack-card"
 export function StackSection() {
   return (
     <section id="stack" className="py-20">
-      <SectionTitle>Technical Stack</SectionTitle>
+      <SectionTitle>Technical Stacks</SectionTitle>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <StackCard 

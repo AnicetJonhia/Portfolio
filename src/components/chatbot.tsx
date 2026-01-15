@@ -118,67 +118,65 @@ Constantly learning and applying new techniques in software architecture and AI.
       
     }
 
-    if (lowerMessage.includes('compétence') || lowerMessage.includes('skill') || lowerMessage.includes('stack') || lowerMessage.includes('tech')|| lowerMessage.includes('summarize your skills')){
-      return `# Technical Stack
+    if (lowerMessage.includes('compétence') || lowerMessage.includes('skill') || lowerMessage.includes('stack') || lowerMessage.includes('tech') || lowerMessage.includes('summarize your skills')) {
+      return `# Technical Stack & Skills
 
-## Frontend
-- React
-- Next.js
-- React Native
+## 🌐 Frontend
+- **Frameworks**: React, Next.js, React Native
+- **Language**: TypeScript, JavaScript
+- **Design**: Figma, UI/UX Design
 
-## Backend
-- Node.js
-- Django
-- Python
+## ⚙️ Backend
+- **Languages**: Python (Expert), SQL, NoSQL
+- **Frameworks**: Django, FastAPI
 
-## AI & Data
-- Machine Learning
-- Deep Learning
-- AI Integration
+## 🧠 Data Science & AI
+- **Libraries**: Pandas, NumPy, Scikit-learn, TensorFlow
+- **Expertise**: ETL Processes, Data Analysis, Machine Learning Integration
 
-## Database & Design
-- SQL
-- NoSQL
-- UI/UX Design
+## 🛠️ Tools & Environments
+- **DevOps**: Docker, Git, GitHub
+- **API**: Postman
+- **Workflow**: Agile, Automation
       `
     }
 
-    if (lowerMessage.includes('experience') ) {
+    if (lowerMessage.includes('experience') || lowerMessage.includes('parcours') || lowerMessage.includes('travail')) {
       return `# Professional Experience
 
-## Python Developer
+## 🐍 Alternant Développeur Python
 - **Company**: Futurmap, Madagascar
-- **Period**: Since March 2024
-- **Description**:
-  - Developing and maintaining scripts and extensions with PyRevit
-  - Automating tasks in Autodesk Revit
+- **Period**: March 2024 – December 2025
+- **Key Missions**:
+  - Development of a quality tracking system.
+  - Internal process automation.
+  - ETL and data analysis.
 
-## Freelance JavaScript Developer
+## 🚀 Freelance JavaScript Developer
 - **Company**: NextRocket, Dubai
 - **Period**: January 2024
-- **Description**:
-  - Automation via Web Scraping
+- **Key Missions**:
+  - Data collection automation via **Web Scraping**.
 
-## Internship
+## 🎨 UI/UX Designer & React Developer (L1)
 - **Company**: LCom Corporation, Madagascar
-- **Period**: September to November 2023
-- **Description**:
-  - UX / UI Design
-  - Getting to Know ReactJs
+- **Period**: August 2023 – October 2023
+- **Key Missions**:
+  - UI mockup design on Figma.
+  - Developing targeted features in React.
 
-## Internship
+## 💻 Web Development Intern
 - **Company**: LCom Corporation, Madagascar
-- **Period**: October to November 2022
-- **Description**:
-  - Showcase Site
-  - Introduction to OOP in PHP
+- **Period**: October 2022 – November 2022
+- **Key Missions**:
+  - Creation of showcase websites.
+  - Object-Oriented Programming (OOP) concepts.
 
-## Professional Discovery Course
+## 🔍 Professional Discovery Internship
 - **Company**: Ibonia, Madagascar
 - **Period**: July 2022
-- **Description**:
-  - Observation
-  - Understanding the Agile Method
+- **Key Missions**:
+  - Discovery of professional roles and internal business processes.
 `
     }
 
@@ -187,7 +185,7 @@ Constantly learning and applying new techniques in software architecture and AI.
 
 ## Agridi (2023)
 **Description**: Bridging producers and consumers through agri-tech app  
-**Tech**: React, Django, SQLite  
+**Tech**: React, Django
 
 
 ## ToBib (2024)

@@ -11,12 +11,26 @@ import Head from "next/head"
 
 export const metadata: Metadata = {
 
-  title: "Anicet Randrianambinina - Software / AI Developer",
-  description: "Anicet Randrianambinina is a Software and AI Developer, motivated and dedicated in the field of Information Technology. Explore his portfolio.",
+  title: "Anicet Randrianambinina - Software / AI & Data Science Developer",
+  description: "Anicet Randrianambinina is a Software , AI & Data Science Developer, motivated and dedicated in the field of Information Technology. Explore his portfolio.",
   keywords: [
     "Software Developer",
     "AI Developer",
+    "Data Science Developer",
     "Web Development",
+    "Mobile Development", 
+    "Machine Learning",
+    "Deep Learning",
+    "Artificial Intelligence",
+    "Full-Stack Developer",
+    "Python Developer",
+    "JavaScript Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Django Developer",
+    "FastAPI Developer",
+    "React Native Developer",
+    "TypeScript Developer",
     "Portfolio",
     "Anicet Randrianambinina",
     "Anicet",
@@ -30,8 +44,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://anicetjonhia.vercel.app"),
 
   openGraph: {
-    title: "Anicet Randrianambinina - Software / AI Developer",
-    description: "Explore the portfolio of Anicet Randrianambinina, a skilled and passionate Software and AI Developer.",
+    title: "Anicet Randrianambinina - Software / AI & Data Science Developer",
+    description: "Explore the portfolio of Anicet Randrianambinina, a skilled and passionate Software and AI & Data Science Developer.",
     url: "https://anicetjonhia.vercel.app/",
     images: [
       {

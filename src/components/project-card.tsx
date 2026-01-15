@@ -106,7 +106,7 @@ export function ProjectCard({
               </div>
 
               <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 flex justify-end">
-                <Button variant="default" onClick={() => setIsOpen(false)} className="px-8 cursor-pointer">
+                <Button variant="default" onClick={() => setIsOpen(false)} className="px-8 cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white">
                   Close
                 </Button>
               </div>

@@ -29,12 +29,11 @@ export function HeroSection() {
           </Link>
         </div>
              <div className="relative flex justify-center items-center">
-              {/* Background effet 3D flouté */}
+             
               <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px]
                               bg-gradient-to-br from-primary via-[#149911] to-primary
                               rounded-full blur-3xl opacity-40 animate-pulse z-0 shadow-xl" />
 
-              {/* Hero Image sans background */}
               <div className="relative z-10 w-64 h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]
                               rounded-full overflow-hidden flex items-center justify-center
                               text-6xl font-bold text-primary shadow-lg ring-2 ring-primary/20">
