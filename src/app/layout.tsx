@@ -54,7 +54,7 @@ export default function RootLayout({
             <link rel="icon" href="/logo.png" />
           </Head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
            <Toaster />
         </ThemeProvider>

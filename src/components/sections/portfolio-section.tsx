@@ -8,7 +8,7 @@ export function PortfolioSection() {
       year: "2023",
       description: "Bridging Producers and consumers through agri-tech app.",
       image: "/images/agridi.png",
-      tags: ["React", "Django", "SQLite"],
+      tags: ["React", "Django"],
       features: [
         "Real-time marketplace for agricultural products",
         "Direct communication between farmers and consumers",

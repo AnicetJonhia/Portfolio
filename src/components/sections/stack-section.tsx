@@ -30,7 +30,7 @@ export function StackSection() {
         
         <StackCard 
           title="Database & Tools" 
-          skills={["SQL", "NoSQL", "Docker", "Figma"]} 
+          skills={["SQL", "NoSQL", "Docker", "Git"]} 
           icon="🛠️" 
         />
       </div>

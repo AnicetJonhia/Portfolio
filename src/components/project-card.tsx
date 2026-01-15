@@ -59,19 +59,18 @@ export function ProjectCard({
           <Button 
             onClick={() => setIsOpen(true)}
             variant="outline" 
-            className="mt-auto w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-colors text-xs font-bold uppercase tracking-wider"
+            className="tracking-wider cursor-pointer"
           >
             View Details
           </Button>
         </CardContent>
       </Card>
 
-
       {isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white dark:bg-gray-950 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative">
             
-           
+   
             <button 
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 z-10 p-2 bg-white/80 dark:bg-gray-800/80 rounded-full hover:bg-red-500 hover:text-white transition-all shadow-md"
@@ -79,7 +78,7 @@ export function ProjectCard({
               <X className="w-5 h-5" />
             </button>
 
-        
+
             <div className="w-full h-64 md:h-96 overflow-hidden">
               <img src={image} alt={title} className="w-full h-full object-cover" />
             </div>
@@ -94,7 +93,6 @@ export function ProjectCard({
                 {description}
               </p>
 
-              
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-emerald-600 uppercase tracking-wide">Key Features</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -108,7 +106,7 @@ export function ProjectCard({
               </div>
 
               <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 flex justify-end">
-                <Button onClick={() => setIsOpen(false)} className="bg-emerald-600 hover:bg-emerald-700 text-white px-8">
+                <Button variant="default" onClick={() => setIsOpen(false)} className="px-8 cursor-pointer">
                   Close
                 </Button>
               </div>
