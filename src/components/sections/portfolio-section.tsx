@@ -6,16 +6,28 @@ export function PortfolioSection() {
     {
       title: "Agridi",
       year: "2023",
-      description: "Bridging Producers and consumers through agri-tech app",
+      description: "Bridging Producers and consumers through agri-tech app.",
       image: "/images/agridi.png",
       tags: ["React", "Django", "SQLite"],
+      features: [
+        "Real-time marketplace for agricultural products",
+        "Direct communication between farmers and consumers",
+        "Inventory management for producers",
+        "Geolocated search for local products"
+      ]
     },
     {
       title: "ToBib",
       year: "2024",
-      description: "AI as medical assistant",
+      description: "AI as medical assistant helping achieve UN Sustainable Development Goal 3.",
       image: "/images/tobib.png",
       tags: ["Next.js", "AI", "Python | Django"],
+      features: [
+        "AI-powered medical symptoms analysis",
+        "Instant medical advice based on reliable data",
+        "Secure storage of consultation history",
+        "Optimized user interface for quick access to information"
+      ]
     },
   ]
 
@@ -26,11 +38,7 @@ export function PortfolioSection() {
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
-            title={project.title}
-            year={project.year}
-            description={project.description}
-            image={project.image}
-            tags={project.tags}
+            {...project}
           />
         ))}
       </div>

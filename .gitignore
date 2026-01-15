@@ -2,7 +2,6 @@
 node_modules/
 .pnp
 .pnp.js
-# Note: On ne met PAS bun.lockb ici, il doit être sur Git
 
 # --- NEXT.JS / BUILD ---
 .next/
@@ -13,7 +12,6 @@ dist/
 next-env.d.ts
 
 # --- ENVIRONMENT VARIABLES ---
-# On ignore tous les fichiers .env qui contiennent des secrets
 .env
 .env.local
 .env.development.local
