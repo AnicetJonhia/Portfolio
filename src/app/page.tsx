@@ -10,6 +10,7 @@ import {PortfolioSection} from "@/components/sections/portfolio-section"
 import {ContactSection} from "@/components/sections/contact-section"
 import {Footer} from "@/components/footer"
 import ChatBot from "@/components/chatbot"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         <ExperienceSection />
         <PortfolioSection />
         <ContactSection />
+        <WhatsAppButton />
         <ChatBot />                                                                                
 
       </main>

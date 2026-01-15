@@ -4,6 +4,9 @@ import { motion } from "motion/react"
 import { SectionTitle } from "@/components/section-title"
 import { MapPin, Award, Terminal, Code2, GraduationCap } from "lucide-react"
 import { StatCard } from "@/components/stat-card"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function AboutSection() {
   const containerVariants = {
@@ -34,7 +37,7 @@ export function AboutSection() {
         
         <div className="lg:col-span-7 bg-card/50 backdrop-blur-sm border border-emerald-200 dark:border-emerald-800 p-8 rounded-3xl shadow-sm flex flex-col justify-center">
           <motion.h3 variants={itemVariants} className="text-2xl font-bold mb-6 text-foreground">
-            Hello, I&apos;m <span className="text-emerald-600">Anicet</span>
+             #<span className="text-emerald-600">Anicet</span>
           </motion.h3>
           
           <motion.p variants={itemVariants} className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -49,6 +52,8 @@ export function AboutSection() {
             designing AI-powered medical assistants, I focus on creating high-performance, tailor-made tools 
             that solve real-world problems.
           </motion.p>
+
+          
         </div>
 
         
@@ -75,13 +80,16 @@ export function AboutSection() {
             value="AI & Automation" 
           />
 
-          <div className="sm:col-span-2 bg-emerald-600 text-white p-6 flex rounded-2xl enter justify-between group overflow-hidden relative">
-             <div className="z-10">
-               <p className="text-emerald-100 text-sm font-medium uppercase tracking-wider">Available for</p>
-               <h4 className="text-xl font-bold italic">New Projects & Challenges</h4>
-             </div>
-             <Code2 className="h-12 w-12" />
-          </div>
+           <motion.div variants={itemVariants} className="group  relative sm:col-span-2">
+            <Link href="#contact" className="block w-full ">
+              <Button 
+                className="cursor-pointer w-full"
+              >
+                <span className="text-base">Let's Connect</span>
+                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />   
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </motion.div>
     </section>

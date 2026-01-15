@@ -235,177 +235,177 @@ Antananarivo, 101, Madagascar
       {!isOpen && (
 
         <Tooltip>
-  <TooltipTrigger>
-        <Button variant={"outline"}
-          onClick={() => setIsOpen(true)}
+                <TooltipTrigger>
+                      <Button variant={"outline"}
+                        onClick={() => setIsOpen(true)}
 
-          className="chat-gradient cursor-pointer rounded-full w-16 h-16 shadow-chat interactive-scale"
-          size="icon"
-        >
-          {/* <MessageCircle className="h-6 w-6 text-white" /> */}
-              <img
-      src="/images/bot.png" 
-      alt="Chatbot Icon"
-      className="h-14"
-    />
-        </Button>
-        </TooltipTrigger>
-  <TooltipContent>
-    <p className='text-white'>🤖 Chat with my portfolio bot</p>
-  </TooltipContent>
-</Tooltip> 
+                        className="chat-gradient cursor-pointer rounded-full w-16 h-16 shadow-chat interactive-scale"
+                        size="icon"
+                      >
+                        {/* <MessageCircle className="h-6 w-6 text-white" /> */}
+                            <img
+                    src="/images/bot.png" 
+                    alt="Chatbot Icon"
+                    className="h-14"
+                  />
+                      </Button>
+                      </TooltipTrigger>
+                <TooltipContent side="left" >
+                  <p className='text-white'>🤖 Chat with my portfolio bot</p>
+                </TooltipContent>
+              </Tooltip> 
       )}
       {/* Chat Window */}
       {isOpen && (
-  <div className="fixed bottom-0 right-0  z-50 w-full md:w-[400px] transition-all duration-300">
-    <Card className="h-[90vh] glass-effect shadow-chat animate-slide-up">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-accent to-accent/90  rounded-t-lg">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                 <img
-                        src="/images/botBot.png" 
-                        alt="Chatbot Icon"
-                        className="h-7 "
-                      />
-              </div>
-              <div>
-                <h3 className="font-semibold text-sm">PortfolioAssistant</h3>
-                <p className="text-xs ">Online</p>
-              </div>
-            </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              className="cursor-pointer hover:bg-white/20 h-8 w-8"
-            >
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
-
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} message-enter`}
-              >
-                <div className="flex items-start space-x-2 max-w-[85%]">
-                  {!message.isUser && (
-                    <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+        <div className="fixed bottom-0 right-0  z-50 w-full md:w-[400px] transition-all duration-300">
+          <Card className="h-[90vh] glass-effect shadow-chat animate-slide-up">
+                {/* Header */}
+                <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-accent to-accent/90  rounded-t-lg">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                       <img
-                        src="/images/botBot.png" 
-                        alt="Chatbot Icon"
-                        className="h-5 "
-                      />
+                              src="/images/botBot.png" 
+                              alt="Chatbot Icon"
+                              className="h-7 "
+                            />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-sm">PortfolioAssistant</h3>
+                      <p className="text-xs ">Online</p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setIsOpen(false)}
+                    className="cursor-pointer hover:bg-white/20 h-8 w-8"
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                </div>
+
+                {/* Messages */}
+                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}
+                      className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} message-enter`}
+                    >
+                      <div className="flex items-start space-x-2 max-w-[85%]">
+                        {!message.isUser && (
+                          <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                            <img
+                              src="/images/botBot.png" 
+                              alt="Chatbot Icon"
+                              className="h-5 "
+                            />
+                          </div>
+                        )}
+                        
+                        <div
+                          className={`chat-bubble ${
+                            message.isUser ? 'chat-bubble-user' : 'chat-bubble-bot'
+                          }`}
+                        >
+                          {message.isUser ? (
+                            <p className="text-sm leading-relaxed">{message.text}</p>
+                          ) : (
+                            <div className="text-sm leading-relaxed prose prose-sm max-w-none dark:prose-invert">
+                              <ReactMarkdown
+                                components={{
+                                  h1: ({node, ...props}) => <h1 className="text-lg font-bold mb-2" {...props} />,
+                                  h2: ({node, ...props}) => <h2 className="text-base font-semibold mb-2 text-foreground" {...props} />,
+                                  h3: ({node, ...props}) => <h3 className="text-sm font-medium mb-1" {...props} />,
+                                  p: ({node, ...props}) => <p className="mb-2" {...props} />,
+                                  strong: ({node, ...props}) => <strong className="font-semibold text-primary" {...props} />,
+                                  ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-1 mb-2" {...props} />,
+                                  li: ({node, ...props}) => <li className="text-sm" {...props} />,
+                                }}
+                              >
+                                {message.text}
+                              </ReactMarkdown>
+                            </div>
+                          )}
+                          <span className="text-xs opacity-70 mt-2 block">
+                            {message.timestamp.toLocaleTimeString([], {
+                              hour: '2-digit',
+                              minute: '2-digit',
+                            })}
+                          </span>
+                        </div>
+
+                        {message.isUser && (
+                          <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
+                            <User className="h-3 w-3 text-white" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                  
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="flex items-start space-x-2">
+                        <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                          <Bot className="h-3 w-3 text-white" />
+                        </div>
+                        <div className="chat-bubble chat-bubble-bot typing-indicator">
+                          <div className="flex space-x-1">
+                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Quick Questions */}
+                  {showQuickQuestions && messages.length === 1 && (
+                    <div className="space-y-2 animate-fade-in">
+                      <p className="text-xs text-muted-foreground text-center mb-3">Quick questions ✅</p>
+                      <div className="flex flex-col gap-2">
+                        {quickQuestions.map((question, index) => (
+                          <Button
+                            key={index}
+                            variant="outline"
+                            size="sm"
+                            onClick={() => handleQuickQuestion(question)}
+                            className="text-left justify-start h-auto py-2 px-3 text-xs border hover:bg-muted/10 border-muted cursor-pointer"
+                          >
+                            {question}
+                          </Button>
+                        ))}
+                      </div>
                     </div>
                   )}
                   
-                  <div
-                    className={`chat-bubble ${
-                      message.isUser ? 'chat-bubble-user' : 'chat-bubble-bot'
-                    }`}
-                  >
-                    {message.isUser ? (
-                      <p className="text-sm leading-relaxed">{message.text}</p>
-                    ) : (
-                      <div className="text-sm leading-relaxed prose prose-sm max-w-none dark:prose-invert">
-                        <ReactMarkdown
-                          components={{
-                            h1: ({node, ...props}) => <h1 className="text-lg font-bold mb-2" {...props} />,
-                            h2: ({node, ...props}) => <h2 className="text-base font-semibold mb-2 text-foreground" {...props} />,
-                            h3: ({node, ...props}) => <h3 className="text-sm font-medium mb-1" {...props} />,
-                            p: ({node, ...props}) => <p className="mb-2" {...props} />,
-                            strong: ({node, ...props}) => <strong className="font-semibold text-primary" {...props} />,
-                            ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-1 mb-2" {...props} />,
-                            li: ({node, ...props}) => <li className="text-sm" {...props} />,
-                          }}
-                        >
-                          {message.text}
-                        </ReactMarkdown>
-                      </div>
-                    )}
-                    <span className="text-xs opacity-70 mt-2 block">
-                      {message.timestamp.toLocaleTimeString([], {
-                        hour: '2-digit',
-                        minute: '2-digit',
-                      })}
-                    </span>
-                  </div>
-
-                  {message.isUser && (
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                      <User className="h-3 w-3 text-white" />
-                    </div>
-                  )}
+                  <div ref={messagesEndRef} />
                 </div>
-              </div>
-            ))}
-            
-            {isTyping && (
-              <div className="flex justify-start">
-                <div className="flex items-start space-x-2">
-                  <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                    <Bot className="h-3 w-3 text-white" />
-                  </div>
-                  <div className="chat-bubble chat-bubble-bot typing-indicator">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
 
-            {/* Quick Questions */}
-            {showQuickQuestions && messages.length === 1 && (
-              <div className="space-y-2 animate-fade-in">
-                <p className="text-xs text-muted-foreground text-center mb-3">Quick questions ✅</p>
-                <div className="flex flex-col gap-2">
-                  {quickQuestions.map((question, index) => (
+                {/* Input */}
+                <div className="p-4 border-t bg-muted/30">
+                  <div className="flex space-x-2">
+                    <Input
+                      placeholder="Your message..."
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      className="flex-1 rounded-full border-0 bg-white/50 backdrop-blur-sm"
+                    />
                     <Button
-                      key={index}
-                      variant="outline"
-                      size="sm"
-                      onClick={() => handleQuickQuestion(question)}
-                      className="text-left justify-start h-auto py-2 px-3 text-xs border hover:bg-muted/10 border-muted cursor-pointer"
+                      onClick={() => handleSendMessage()}
+                      disabled={!inputValue.trim()}
+                      className="chat-gradient rounded-full w-10 h-10 interactive-scale cursor-pointer"
+                      size="icon"
                     >
-                      {question}
+                      <Send className="h-4 w-4 text-white" />
                     </Button>
-                  ))}
+                  </div>
+
                 </div>
+              </Card>
               </div>
-            )}
-            
-            <div ref={messagesEndRef} />
-          </div>
-
-          {/* Input */}
-          <div className="p-4 border-t bg-muted/30">
-            <div className="flex space-x-2">
-              <Input
-                placeholder="Your message..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
-                className="flex-1 rounded-full border-0 bg-white/50 backdrop-blur-sm"
-              />
-              <Button
-                onClick={() => handleSendMessage()}
-                disabled={!inputValue.trim()}
-                className="chat-gradient rounded-full w-10 h-10 interactive-scale cursor-pointer"
-                size="icon"
-              >
-                <Send className="h-4 w-4 text-white" />
-              </Button>
-            </div>
-
-          </div>
-        </Card>
-        </div>
       )}
     </div>
   );
