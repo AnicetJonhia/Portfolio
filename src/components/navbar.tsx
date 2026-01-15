@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-
+import {CallButton} from "@/components/call-button"
 
 
 const navItems = ["Home", "About", "Stack", "Experience", "Portfolio", "Contact"]
@@ -23,6 +23,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="flex items-center">
+          <CallButton />
           <ThemeToggle />
           <MobileMenu />
         </div>
