@@ -41,7 +41,7 @@ export function AboutSection() {
           </motion.h3>
           
           <motion.p variants={itemVariants} className="text-lg leading-relaxed text-muted-foreground mb-6">
-            Based in <span className="font-semibold text-foreground">Antananarivo</span>, I am a 
+            Based in <span className="font-semibold text-foreground">Antananarivo, Madagascar </span>, I am a 
             <span className="text-emerald-600 font-bold"> Fullstack Developer</span> with a deep passion for 
             Artificial Intelligence and Data Science.
           </motion.p>
