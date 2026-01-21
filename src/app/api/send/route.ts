@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import {CONTACT_DETAILS} from "@/lib/contact"
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,7 +10,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>', 
-      to: ['anicet22.aps2a@gmail.com'], // L'adresse qui recevra l'email
+      to: CONTACT_DETAILS.email.display,
       subject: `Nouveau message de ${name} via votre portfolio`,
       replyTo: email,
       html: `

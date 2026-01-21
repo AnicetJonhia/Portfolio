@@ -3,9 +3,10 @@
 import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "motion/react"
+import {CONTACT_DETAILS} from "@/lib/contact"
 
 export function CallButton() {
-  const phoneNumber = "+261344822412"
+  const phoneNumber = CONTACT_DETAILS.phone.value
 
   return (
     <Button

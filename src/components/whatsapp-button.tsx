@@ -8,9 +8,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import {CONTACT_DETAILS} from "@/lib/contact"
 
 export function WhatsAppButton() {
-  const phoneNumber = "261344822412"
+  const phoneNumber = CONTACT_DETAILS.phone.value
   const message = "Hello Anicet, I saw your portfolio and I would like to discuss a project with you."
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 

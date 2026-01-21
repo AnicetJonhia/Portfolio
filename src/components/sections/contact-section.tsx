@@ -8,7 +8,8 @@ import { SectionTitle } from "@/components/section-title"
 import { Button } from "@/components/ui/button"
 import { ContactItem } from "@/components/contact-item"
 import { SocialButton } from "@/components/social-button"
-import { SOCIAL_HREFS } from "@/lib/contact"
+import { SOCIAL_HREFS , CONTACT_DETAILS} from "@/lib/contact"
+
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -74,13 +75,13 @@ export function ContactSection() {
           <div className="space-y-4">
             <ContactItem 
               icon={<Phone className="h-5 w-5" />} 
-              text="+261 34 48 224 12" 
-              href="tel:+261344822412" 
+              text={CONTACT_DETAILS.phone.display} 
+              href={CONTACT_DETAILS.phone.href} 
             />
             <ContactItem 
               icon={<Mail className="h-5 w-5" />} 
-              text="anicet22.aps2a@gmail.com" 
-              href="mailto:anicet22.aps2a@gmail.com" 
+              text={CONTACT_DETAILS.email.display} 
+              href={CONTACT_DETAILS.email.href} 
             />
             <ContactItem 
               icon={<MapPin className="h-5 w-5" />} 
