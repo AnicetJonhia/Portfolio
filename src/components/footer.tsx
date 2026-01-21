@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Code, CodeXml } from 'lucide-react';
 import { SocialButton } from "./social-button"
+import { SOCIAL_HREFS } from "@/lib/contact"
 
 export function Footer() {
   return (
@@ -47,9 +48,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4 uppercase tracking-wider text-xs">Follow me</h3>
             <div className="flex space-x-4">
-              <SocialButton href="https://github.com/AnicetJonhia" icon="github" />
-              <SocialButton href="https://www.linkedin.com/in/anicet-jonhia-randrianambinina-266628244/" icon="linkedin" />
-              <SocialButton href="https://www.facebook.com/anicet.jonhia/" icon="facebook" />
+              <SocialButton href={SOCIAL_HREFS.github} icon="github" />
+              <SocialButton href={SOCIAL_HREFS.linkedin} icon="linkedin" />
+              <SocialButton href={SOCIAL_HREFS.facebook} icon="facebook" />
             </div>
             <div className="mt-6">
               <p className="text-xs text-gray-500">Based in Antananarivo, MG</p>

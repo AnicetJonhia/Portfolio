@@ -8,6 +8,7 @@ import { SectionTitle } from "@/components/section-title"
 import { Button } from "@/components/ui/button"
 import { ContactItem } from "@/components/contact-item"
 import { SocialButton } from "@/components/social-button"
+import { SOCIAL_HREFS } from "@/lib/contact"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -87,9 +88,9 @@ export function ContactSection() {
             />
           </div>
           <div className="mt-8 flex space-x-4">
-            <SocialButton href="https://github.com/AnicetJonhia" icon="github" />
-            <SocialButton href="https://www.linkedin.com/in/anicet-jonhia-randrianambinina-266628244/" icon="linkedin" />
-            <SocialButton href="https://www.facebook.com/anicet.jonhia/?locale=fr_FR" icon="facebook" />
+            <SocialButton href={SOCIAL_HREFS.github} icon="github" />
+            <SocialButton href={SOCIAL_HREFS.linkedin} icon="linkedin" />
+            <SocialButton href={SOCIAL_HREFS.facebook} icon="facebook" />
           </div>
         </div>
 
