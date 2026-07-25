@@ -12,7 +12,7 @@ export function CallButton() {
     <Button
       variant="ghost"
       size="icon"
-      className="md:hidden cursor-pointer text-emerald-600 dark:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+      className="md:hidden cursor-pointer text-primary hover:bg-accent"
       asChild
     >
       <motion.a 

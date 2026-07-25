@@ -33,7 +33,7 @@ export function SocialButton({ href, icon }: { href: string; icon: string }) {
   return (
     <Link
       href={href}
-      className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-emerald-500 hover:text-white transition-colors"
+      className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
     >
       {getIcon()}
     </Link>

@@ -70,7 +70,7 @@ export function ContactSection() {
     <section id="contact" className="py-20">
       <SectionTitle>Get In Touch</SectionTitle>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+        <div className="bg-card border border-border rounded-xl shadow-md p-6">
           <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
           <div className="space-y-4">
             <ContactItem 
@@ -95,7 +95,7 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+        <div className="bg-card border border-border rounded-xl shadow-md p-6">
           <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
@@ -106,7 +106,7 @@ export function ContactSection() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <div>
@@ -117,7 +117,7 @@ export function ContactSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <div>
@@ -128,12 +128,12 @@ export function ContactSection() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               ></textarea>
             </div>
             <Button
               type="submit"
-              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer"
+              className="w-full cursor-pointer"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Send Message"}

@@ -1,11 +1,15 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Poppins } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 
-const inter = Inter({ subsets: ["latin"] })
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+})
 
 import Head from "next/head"
 
@@ -67,7 +71,7 @@ export default function RootLayout({
             <meta name="google-site-verification" content="1kWonT8tdal8JxBDAqzW51OuVm7bBtd3o9dAdZuJPcs" />
             <link rel="icon" href="/logo.png" />
           </Head>
-      <body className={inter.className}>
+      <body className={`${poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
            <Toaster />

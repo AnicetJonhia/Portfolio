@@ -35,14 +35,14 @@ export function AboutSection() {
         className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch"
       >
         
-        <div className="lg:col-span-7 bg-card/50 backdrop-blur-sm border border-emerald-200 dark:border-emerald-800 p-8 rounded-3xl shadow-sm flex flex-col justify-center">
+        <div className="lg:col-span-7 bg-card/50 backdrop-blur-sm border border-primary/20 p-8 rounded-3xl shadow-sm flex flex-col justify-center">
           <motion.h3 variants={itemVariants} className="text-2xl font-bold mb-6 text-foreground">
-             #<span className="text-emerald-600">Anicet</span>
+             #<span className="text-primary">Anicet</span>
           </motion.h3>
           
           <motion.p variants={itemVariants} className="text-lg leading-relaxed text-muted-foreground mb-6">
             Based in <span className="font-semibold text-foreground">Antananarivo, Madagascar </span>, I am a 
-            <span className="text-emerald-600 font-bold"> Fullstack Developer</span> with a deep passion for 
+            <span className="text-primary font-bold"> Fullstack Developer</span> with a deep passion for 
             Artificial Intelligence and Data Science.
           </motion.p>
 
@@ -60,22 +60,22 @@ export function AboutSection() {
         <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
           
           <StatCard 
-            icon={<MapPin className="text-emerald-600" />} 
+            icon={<MapPin className="text-primary" />} 
             title="Origin" 
             value="Fianarantsoa, MG" 
           />
           <StatCard 
-            icon={<Award className="text-emerald-600" />} 
+            icon={<Award className="text-primary" />} 
             title="Devfest 2024" 
             value="3rd Place Winner" 
           />
           <StatCard 
-            icon={<GraduationCap className="text-emerald-600" />} 
+            icon={<GraduationCap className="text-primary" />} 
             title="Education" 
             value="ESTI" 
           />
           <StatCard 
-            icon={<Terminal className="text-emerald-600" />} 
+            icon={<Terminal className="text-primary" />} 
             title="Focus" 
             value="AI & Automation" 
           />

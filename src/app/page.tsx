@@ -9,14 +9,13 @@ import {ExperienceSection} from "@/components/sections/experience-section"
 import {PortfolioSection} from "@/components/sections/portfolio-section"
 import {ContactSection} from "@/components/sections/contact-section"
 import {Footer} from "@/components/footer"
-import ChatBot from "@/components/chatbot"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
 
 export default function Home() {
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
       <Navbar />
 
       <main className="container mx-auto px-4 py-8">
@@ -27,7 +26,6 @@ export default function Home() {
         <PortfolioSection />
         <ContactSection />
         <WhatsAppButton />
-        <ChatBot />                                                                                
 
       </main>
       <Footer />
